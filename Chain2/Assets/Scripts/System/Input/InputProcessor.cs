@@ -29,7 +29,7 @@ public class InputProcessor : MonoBehaviour
 
 
     private void Update()
-    {
+    {        
         //!!!this is all windows specific code and wont work at all on android!!!
         if(Input.GetMouseButtonDown(0))
         {
@@ -64,7 +64,7 @@ public class InputProcessor : MonoBehaviour
         data.lastX = 0;
         data.deltaX = 0;
         data.maxDelta = 0;
-        data.normalizedDelta = 0;
+        data.normalizedDelta = 0.5f;
         data.state = fingerState.up;
         calculateDelta();
     }
@@ -79,7 +79,7 @@ public class InputProcessor : MonoBehaviour
     //this method is used for normalizing the delta
     private float normalizeDelta(float delta, float maxDelta)
     {
-        return (Mathf.Abs(delta) / Mathf.Abs(maxDelta)) * Mathf.Sign(delta);
+        return (Mathf.Abs(delta) / Mathf.Abs(maxDelta)) * Mathf.Sign(delta) + 0.5f;
     }
 
     //make sure the delta is clamped to -1,1
@@ -121,6 +121,12 @@ public class InputProcessor : MonoBehaviour
         {
             onFingerUp();
         }
+    }
+
+    //call this method to finalize the data
+    public void fingerReset()
+    {
+        data.normalizedDelta = 0.5f;
     }
 }
 

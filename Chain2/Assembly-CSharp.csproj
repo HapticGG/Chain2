@@ -56,9 +56,12 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\System\Input\InputData.cs" />
     <Compile Include="Assets\Scripts\System\Input\InputProcessor.cs" />
     <Compile Include="Assets\Scripts\System\Input\InputDisplayManager.cs" />
+    <Compile Include="Assets\Scripts\System\Input\InputData.cs" />
+    <Compile Include="Assets\Scripts\Orbs\orbData.cs" />
+    <Compile Include="Assets\Scripts\Orbs\orbMachine.cs" />
+    <Compile Include="Assets\Scripts\Orbs\orbAim.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

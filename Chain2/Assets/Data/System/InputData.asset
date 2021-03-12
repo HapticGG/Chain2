@@ -15,6 +15,6 @@ MonoBehaviour:
   startX: 0
   lastX: 0
   deltaX: 0
-  normalizedDelta: 0
-  maxDelta: 0
+  normalizedDelta: 0.5
+  maxDelta: 540
   state: 1
