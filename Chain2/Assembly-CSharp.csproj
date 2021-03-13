@@ -57,11 +57,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\System\Input\InputProcessor.cs" />
-    <Compile Include="Assets\Scripts\System\Input\InputDisplayManager.cs" />
-    <Compile Include="Assets\Scripts\System\Input\InputData.cs" />
-    <Compile Include="Assets\Scripts\Orbs\orbData.cs" />
     <Compile Include="Assets\Scripts\Orbs\orbMachine.cs" />
     <Compile Include="Assets\Scripts\Orbs\orbAim.cs" />
+    <Compile Include="Assets\Scripts\Orbs\orbData.cs" />
+    <Compile Include="Assets\Scripts\System\Input\InputDisplayManager.cs" />
+    <Compile Include="Assets\Scripts\System\Input\InputData.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -285,6 +285,9 @@
     </Reference>
     <Reference Include="UnityEditor.UnityConnectModule">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.2.3f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UDP">
+      <HintPath>Library\PackageCache\com.unity.purchasing.udp@2.0.0\Runtime\UDP.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.2.3f1\Editor\Data\MonoBleedingEdge\lib\mono\4.7.1-api\mscorlib.dll</HintPath>
@@ -693,6 +696,18 @@
     </Reference>
     <Reference Include="Unity.Mathematics">
       <HintPath>Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Advertisements">
+      <HintPath>Library\ScriptAssemblies\UnityEngine.Advertisements.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Monetization">
+      <HintPath>Library\ScriptAssemblies\UnityEngine.Monetization.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Advertisements.Editor">
+      <HintPath>Library\ScriptAssemblies\UnityEngine.Advertisements.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.purchasing.udp.Editor">
+      <HintPath>Library\ScriptAssemblies\com.unity.purchasing.udp.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

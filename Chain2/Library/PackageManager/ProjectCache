@@ -5,21 +5,151 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637510227920483712
-    m_Hash: 904420795
+      ticks: 637511900019650917
+    m_Hash: 1716191893
   m_LockFileStatus:
     m_FilePath: D:/Drive/Unity/Projects/Chain2/Chain2/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637510229061375732
-    m_Hash: 1436463458
+      ticks: 637511900030260572
+    m_Hash: 3228527702
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
   m_Packages:
     m_ResolvedPackages:
+    - packageId: com.unity.ads@3.6.1
+      testable: 0
+      isDirectDependency: 1
+      version: 3.6.1
+      source: 1
+      resolvedPath: D:\Drive\Unity\Projects\Chain2\Chain2\Library\PackageCache\com.unity.ads@3.6.1
+      assetPath: Packages/com.unity.ads
+      name: com.unity.ads
+      displayName: Advertisement
+      author:
+        name: 
+        email: 
+        url: 
+      category: 
+      type: 
+      description: Unity Ads is a video ad network for iOS and Android that allows
+        you to quickly and effectively monetize your games.
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 0.0.3
+        - 0.0.4
+        - 0.0.5
+        - 0.0.6
+        - 0.0.7
+        - 0.0.8
+        - 0.0.10
+        - 0.0.11
+        - 0.0.12
+        - 0.0.13
+        - 0.0.14
+        - 0.0.15
+        - 0.0.16
+        - 2.0.0
+        - 2.0.3
+        - 2.0.4
+        - 2.0.7
+        - 2.0.8
+        - 2.3.1
+        - 2.3.2
+        - 3.0.1
+        - 3.0.2
+        - 3.0.3
+        - 3.1.1
+        - 3.2.0
+        - 3.3.0
+        - 3.3.1
+        - 3.4.0
+        - 3.4.1
+        - 3.4.2
+        - 3.4.4
+        - 3.4.5
+        - 3.4.7
+        - 3.4.9
+        - 3.5.0
+        - 3.5.2
+        - 3.6.1
+        compatible:
+        - 0.0.3
+        - 0.0.4
+        - 0.0.5
+        - 0.0.6
+        - 0.0.7
+        - 0.0.8
+        - 0.0.10
+        - 0.0.11
+        - 0.0.12
+        - 0.0.13
+        - 0.0.14
+        - 0.0.15
+        - 0.0.16
+        - 2.0.0
+        - 2.0.3
+        - 2.0.4
+        - 2.0.7
+        - 2.0.8
+        - 2.3.1
+        - 2.3.2
+        - 3.0.1
+        - 3.0.2
+        - 3.0.3
+        - 3.1.1
+        - 3.2.0
+        - 3.3.0
+        - 3.3.1
+        - 3.4.0
+        - 3.4.1
+        - 3.4.2
+        - 3.4.4
+        - 3.4.5
+        - 3.4.7
+        - 3.4.9
+        - 3.5.0
+        - 3.5.2
+        - 3.6.1
+        verified: 3.6.1
+      dependencies:
+      - name: com.unity.ugui
+        version: 1.0.0
+      resolvedDependencies:
+      - name: com.unity.ugui
+        version: 1.0.0
+      - name: com.unity.modules.ui
+        version: 1.0.0
+      - name: com.unity.modules.imgui
+        version: 1.0.0
+      keywords:
+      - ads
+      - unity
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 637433982320000000
+      documentationUrl: 
+      hasRepository: 1
+      repository:
+        type: git
+        url: https://github.cds.internal.unity3d.com/unity/com.unity.ads.git
+        revision: aa1c5a9556a9bb62eef662153cfaa1075805106f
+        path: 
     - packageId: com.unity.collab-proxy@1.3.9
       testable: 0
       isDirectDependency: 1
@@ -358,6 +488,124 @@ m_PackageAssets:
         url: https://github.cds.internal.unity3d.com/unity/com.unity.ide.vscode.git
         revision: b5ec9b38109e52b1b26597d521e4df75e042ebb9
         path: 
+    - packageId: com.unity.purchasing.udp@2.0.0
+      testable: 0
+      isDirectDependency: 1
+      version: 2.0.0
+      source: 1
+      resolvedPath: D:\Drive\Unity\Projects\Chain2\Chain2\Library\PackageCache\com.unity.purchasing.udp@2.0.0
+      assetPath: Packages/com.unity.purchasing.udp
+      name: com.unity.purchasing.udp
+      displayName: Unity Distribution Portal
+      author:
+        name: 
+        email: 
+        url: 
+      category: 
+      type: 
+      description: 'Unity Distribution Portal (UDP) gives you direct and ready access
+        to third-party Android app stores.
+
+
+        This package allows you to implement
+        only one In-App Payment SDK for all the app stores accessible via UDP.
+
+
+        The
+        UDP console will let you centralize your marketing assets and game metadata,
+        and submit your game to multiple app stores from a single hub.'
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 0.2.6-preview.3
+        - 1.0.0-preview.1
+        - 1.0.3-preview.2
+        - 1.0.3-preview.3
+        - 1.1.0-preview.1
+        - 1.1.3-preview.1
+        - 1.1.3-preview.2
+        - 1.1.3-preview.4
+        - 1.1.3-preview.5
+        - 1.1.3-preview.7
+        - 1.2.0-preview.2
+        - 1.2.0-preview.3
+        - 1.2.0-preview.4
+        - 1.2.0-preview.5
+        - 1.2.0-preview.6
+        - 1.2.0-preview.7
+        - 1.2.0
+        - 1.3.0-preview.1
+        - 1.3.0-preview.2
+        - 1.3.0
+        - 1.3.1-preview.1
+        - 2.0.0-preview.1
+        - 2.0.0
+        - 2.0.1-preview.1
+        - 2.0.2-preview.1
+        - 2.1.0-pre.2
+        - 2.1.0-pre.3
+        - 2.1.0
+        - 2.1.4
+        - 2.1.6
+        compatible:
+        - 0.2.6-preview.3
+        - 1.0.0-preview.1
+        - 1.0.3-preview.2
+        - 1.0.3-preview.3
+        - 1.1.0-preview.1
+        - 1.1.3-preview.1
+        - 1.1.3-preview.2
+        - 1.1.3-preview.4
+        - 1.1.3-preview.5
+        - 1.1.3-preview.7
+        - 1.2.0-preview.2
+        - 1.2.0-preview.3
+        - 1.2.0-preview.4
+        - 1.2.0-preview.5
+        - 1.2.0-preview.6
+        - 1.2.0-preview.7
+        - 1.2.0
+        - 1.3.0-preview.1
+        - 1.3.0-preview.2
+        - 1.3.0
+        - 1.3.1-preview.1
+        - 2.0.0-preview.1
+        - 2.0.0
+        - 2.0.1-preview.1
+        - 2.0.2-preview.1
+        - 2.1.0-pre.2
+        - 2.1.0-pre.3
+        - 2.1.0
+        - 2.1.4
+        - 2.1.6
+        verified: 2.0.0
+      dependencies: []
+      resolvedDependencies: []
+      keywords:
+      - android
+      - purchasing
+      - iap
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 637272081180000000
+      documentationUrl: 
+      hasRepository: 1
+      repository:
+        type: git
+        url: https://github.cds.internal.unity3d.com/unity/com.unity.purchasing.udp.git
+        revision: 798aa412c850c5cee9fe518d6e36e97e1ed6611d
+        path: 
     - packageId: com.unity.render-pipelines.universal@10.2.2
       testable: 0
       isDirectDependency: 1
@@ -413,6 +661,7 @@ m_PackageAssets:
         - 10.2.2
         - 10.3.1
         - 10.3.2
+        - 10.4.0
         compatible:
         - 10.2.2
         - 10.3.1
@@ -783,7 +1032,9 @@ m_PackageAssets:
         - 1.5.1-pre.2
         - 1.5.1-pre.3
         - 1.5.2
+        - 1.5.4
         - 1.6.0-pre.1
+        - 1.6.0-pre.3
         compatible:
         - 1.2.6
         - 1.2.7
@@ -833,7 +1084,9 @@ m_PackageAssets:
         - 1.5.1-pre.2
         - 1.5.1-pre.3
         - 1.5.2
+        - 1.5.4
         - 1.6.0-pre.1
+        - 1.6.0-pre.3
         verified: 1.4.6
       dependencies:
       - name: com.unity.modules.director
@@ -2931,6 +3184,7 @@ m_PackageAssets:
         - 10.2.2
         - 10.3.1
         - 10.3.2
+        - 10.4.0
         compatible:
         - 10.2.2
         - 10.3.1
@@ -3075,6 +3329,7 @@ m_PackageAssets:
         - 10.2.2
         - 10.3.1
         - 10.3.2
+        - 10.4.0
         compatible:
         - 10.2.2
         - 10.3.1
@@ -3149,6 +3404,7 @@ m_PackageAssets:
         - 4.2.0
         - 4.3.0
         - 4.3.1
+        - 4.3.2
         - 4.6.0-preview
         - 4.7.0-preview
         compatible:
@@ -3163,9 +3419,10 @@ m_PackageAssets:
         - 4.2.0
         - 4.3.0
         - 4.3.1
+        - 4.3.2
         - 4.6.0-preview
         - 4.7.0-preview
-        verified: 4.3.1
+        verified: 4.3.2
       dependencies: []
       resolvedDependencies: []
       keywords:
