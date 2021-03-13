@@ -25,35 +25,91 @@ public class InputProcessor : MonoBehaviour
     private void Start()
     {
         initializeData();
+        if(Application.platform == RuntimePlatform.WindowsEditor || Application.platform == RuntimePlatform.WindowsPlayer)
+        {
+            _platform = platform.windows;
+        }
+        else
+        {
+            if(Application.platform == RuntimePlatform.Android)
+            {
+                _platform = platform.android;
+            }
+            else
+            {
+                throw new System.Exception("You are playing on a unsupported platform, How are you even doing that???!!!???");
+            }
+        }
     }
 
 
     private void Update()
-    {        
-        //!!!this is all windows specific code and wont work at all on android!!!
-        if(Input.GetMouseButtonDown(0))
+    {
+        switch (_platform)
         {
-            fingerTapped();
-        }
-        else
-        {
-            if(Input.GetMouseButton(0))
-            {
-                //update data while the cursor is down
-                data.state = fingerState.down;
-                data.lastX = Input.mousePosition.x;
-                data.deltaX = data.lastX - data.startX;
-                data.normalizedDelta = normalizeDelta(data.deltaX, data.maxDelta);
-                data.normalizedDelta = clampDelta(data.normalizedDelta);
-            }
-            else
-            {
-                if(Input.GetMouseButtonUp(0))
+            case platform.windows:
+                #region WindowsInput
+                if (Input.GetMouseButtonDown(0))
                 {
-                    fingerReleased();
+                    fingerTapped();
                 }
-            }
+                else
+                {
+                    if (Input.GetMouseButton(0))
+                    {
+                        //update data while the cursor is down
+                        data.state = fingerState.down;
+                        data.lastX = Input.mousePosition.x;
+                        data.deltaX = data.lastX - data.startX;
+                        data.normalizedDelta = normalizeDelta(data.deltaX, data.maxDelta);
+                        data.normalizedDelta = clampDelta(data.normalizedDelta);
+                    }
+                    else
+                    {
+                        if (Input.GetMouseButtonUp(0))
+                        {
+                            fingerReleased();
+                        }
+                    }
+                }
+                break;
+            #endregion
+            #region AndroidInput
+            case platform.android:
+                int fingers = Input.touchCount;
+                //if there is indeed a finger touching the screen
+                if(fingers>0)
+                {
+                    Touch touch0 = Input.GetTouch(0);
+                    TouchPhase tp = touch0.phase;
+                    if(tp == TouchPhase.Began)
+                    {
+                        fingerTapped();
+                    }
+                    else
+                    {
+                        if(tp == TouchPhase.Ended)
+                        {
+                            fingerReleased();
+                        }
+                        else
+                        {
+                            if (tp == TouchPhase.Moved)
+                            {
+                                data.state = fingerState.down;
+                                data.lastX = touch0.position.x;
+                                data.deltaX = data.lastX - data.startX;
+                                data.normalizedDelta = normalizeDelta(data.deltaX, data.maxDelta);
+                                data.normalizedDelta = clampDelta(data.normalizedDelta);
+                            }
+
+                        }
+                    }
+                }
+                break;
+                #endregion
         }
+
 
     }
 
@@ -99,8 +155,23 @@ public class InputProcessor : MonoBehaviour
         inputPhase = phase.started;
         data.state = fingerState.down;
 
-        //this is temporary and will not work on android
-        data.startX = Input.mousePosition.x;
+        if (_platform == platform.windows)
+        {
+            data.startX = Input.mousePosition.x;
+        }
+        else
+        {
+            if (_platform == platform.android)
+            {
+                int fingers = Input.touchCount;
+                //if there is indeed a finger touching the screen
+                if (fingers > 0)
+                {
+                    Touch touch0 = Input.GetTouch(0);
+                    data.startX = touch0.position.x;
+                }
+            }
+        }
 
         if(onFingerDown!=null)
         {
@@ -114,9 +185,23 @@ public class InputProcessor : MonoBehaviour
         inputPhase = phase.idle;
         data.state = fingerState.up;
 
-        //this is temporary and will not work on android 
-        data.lastX = Input.mousePosition.x;
-
+        if (_platform == platform.windows)
+        {
+            data.lastX = Input.mousePosition.x;
+        }
+        else
+        {
+            if(_platform == platform.android)
+            {
+                int fingers = Input.touchCount;
+                //if there is indeed a finger touching the screen
+                if (fingers > 0)
+                {
+                    Touch touch0 = Input.GetTouch(0);
+                    data.lastX = touch0.position.x;
+                }
+            }
+        }
         if(onFingerUp!=null)
         {
             onFingerUp();
